@@ -2,7 +2,7 @@
 @extends("_common.sidebar")
 @extends("_common.navbar")
 
-@section('title', 'Bug Tracker by Maksa988')
+@section('title', 'Восстановление пароля')
 
 @section('content')
     <form method="POST" action="/password/email">

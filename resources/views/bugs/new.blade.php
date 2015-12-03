@@ -2,7 +2,7 @@
 @extends("_common.sidebar")
 @extends("_common.navbar")
 
-@section('title', 'Bug Tracker by Maksa988')
+@section('title', 'Добавить новое сообщение об ошибке')
 
 @section('content')
     <form class="form-signin" action="" method="POST">
