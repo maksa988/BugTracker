@@ -11,31 +11,17 @@
         @endforeach
     @endif
     
-    <form method="POST" action="/auth/register">
+	<form class="form-signin" style="width: 40%; margin: 0 auto;" action="" method="POST">
 	    {!! csrf_field() !!}
 
-	    <div class="col-md-6">
-	        Name
-	        <input type="text" name="name" value="{{ old('name') }}">
-	    </div>
-
-	    <div>
-	        Email
-	        <input type="email" name="email" value="{{ old('email') }}">
-	    </div>
-
-	    <div>
-	        Password
-	        <input type="password" name="password">
-	    </div>
-
-	    <div class="col-md-6">
-	        Confirm Password
-	        <input type="password" name="password_confirmation">
-	    </div>
-
-	    <div>
-	        <button type="submit">Register</button>
-	    </div>
+	    <label for="inputName" class="sr-only">Логин</label>
+	    	<input type="name" id="inputName" name="name" class="form-control" placeholder="Логин" required autofocus style="margin-bottom: 10px;">
+	    <label for="inputEmail" class="sr-only">Email</label>
+	    	<input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email" required autofocus style="margin-bottom: 10px;">
+	    <label for="inputPassword" class="sr-only">Пароль</label>
+	    	<input type="password" id="inputPassword" name="password" class="form-control" placeholder="Пароль" required style="margin-bottom: 10px;">
+	    <label for="inputpassword_confirmation" class="sr-only">Повторите пароль</label>
+	    	<input type="password" id="inputpassword_confirmation" name="password_confirmation" class="form-control" placeholder="Повторите пароль" required style="margin-bottom: 10px;">
+	    <button class="btn btn-primary" type="submit">Зарегестрироваться</button>
 	</form>
 @stop

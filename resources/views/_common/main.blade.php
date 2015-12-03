@@ -117,6 +117,13 @@
     <script src="//cdn.ckeditor.com/4.5.3/standard/ckeditor.js"></script>
     <script>
         CKEDITOR.replace( 'bug_text' );
+        $('body').tooltip({
+          selector: "[data-toggle=tooltip]",
+          container: "body"
+        })
+        $("[data-toggle=popover]")
+          .popover()
+
     </script>
   </body>
 </html>

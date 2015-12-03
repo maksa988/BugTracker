@@ -28,5 +28,4 @@ Route::post('user/register', 'Auth\AuthController@postRegister');
 //Bugs
 Route::get('bugs/new', ['middleware' => 'auth', 'uses' => 'bugController@getCreate']);
 Route::post('bugs/new', ['middleware' => 'auth', 'uses' => 'bugController@postCreate']);
-
 Route::get('bugs/view/{id}', 'bugController@view')->where('id', '[0-9]+');;

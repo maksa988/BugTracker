@@ -19,6 +19,9 @@ h6, .h6 {
   color: #333;
 }
 
+.clear {
+  clear: both;
+}
 
 /*
  * Override Bootstrap's default container.

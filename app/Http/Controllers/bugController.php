@@ -8,6 +8,7 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 use App\Bugs;
+use App\User;
 use Auth;
 
 class bugController extends Controller
@@ -37,7 +38,7 @@ class bugController extends Controller
         $params = $request->all();
         $params['user_id'] = Auth::user()->id;
         $bugID = $BugsModel->addBugMessage($params)->id;
-        return redirect()->route('bugs/view/'.$bugID);
+        return redirect()->route('bugs/my');
     }
 
     /**
@@ -57,10 +58,12 @@ class bugController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function view($id)
+    public function view($id, Bugs $BugsModel, User $UserModel)
     {
-        $data = [];
-        return view("bugs.view", $data);
+        $bugInfo = $BugsModel->getBugInfo($id);
+        $user = $UserModel->find($bugInfo->user_id);
+
+        return view("bugs.view", ["bug" => $bugInfo, "user" => $user]);
     }
 
     /**
