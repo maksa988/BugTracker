@@ -6,11 +6,7 @@ use App\Bugs;
 
 class Helper
 {
-    public function getComments(){
+    public function getComments(Bugs $BugsModel){
         
-    }
-
-    public function getUserInfo(){
-        return "Hello World!";
     }
 }
