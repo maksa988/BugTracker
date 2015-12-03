@@ -38,7 +38,7 @@ class bugController extends Controller
         $params = $request->all();
         $params['user_id'] = Auth::user()->id;
         $bugID = $BugsModel->addBugMessage($params)->id;
-        return redirect()->route('bugs/my');
+        return redirect("bugs/my");
     }
 
     /**

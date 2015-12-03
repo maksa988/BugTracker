@@ -18,7 +18,7 @@ class Bugs extends Migration
             $table->integer('bug_status');            
             $table->text('bug_text');            
             $table->integer('user_id');   
-            $table->timestamp('bug_time');
+            $table->timestamp('bug_time')->nullable("CURRENT_TIMESTAMP");
         });
     }
 
